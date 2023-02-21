@@ -22,7 +22,6 @@ body {
 	font-family: 'Staatliches', cursive;
 	background-color: var(--primary-bg-colour);
 	color: var(--primary-white);
-	cursor: none;
 }
 
 /* =================== font styles =================== */
