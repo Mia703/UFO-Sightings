@@ -6,37 +6,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Are you a Believer?</title>
 	<link rel="stylesheet" href="style.css">
+	<script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
 </head>
 <body>
 
-	<div class="overlay">
-		<!-- <img src="./assets/crinkled paper.jpg" alt="crinkled paper"> -->
-	</div>
+	<!-- paper overlay -->
+	<div class="overlay" style="display: none;"></div>
 
 	<div class="main-grid">
 
 		<section class="header-section">
 
-			<h1 class="header">
-				<a href="https://www.google.com">hello</a>
-				Flying saucers and
-				<br>
-				<span class="large-hr">UFOs</span>
-				<br>
-				1949 - 2014
-			</h1>
-
-			<div class="dot-map">
-				<!-- insert tableu here -->
+			<div class="header-txt-container">
+				<h1>Flying sacuers and</h1>
+				<h1 class="large-hr">UFOs</h1>
+				<h1>1949 - 2014</h1>
 			</div>
 
 			<h2 class="sub-header">Are we really alone?</h2>
 		</section>
 		
 		<section class="body-section">
-			<div class="inter-graphs">
-				<!-- insert tableu here -->
-				<!-- this should be 3 graphs that are connected to one another -->
+			<div id="viz-container">
+				<tableau-viz id="tableauViz" 
+				src='https://public.tableau.com/views/IntrotoMapsTutorial/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link'>
+				</tableau-viz>
 			</div>
 
 			<div class="scroll-banner">

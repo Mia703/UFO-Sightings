@@ -20,7 +20,6 @@
 /* =================== base page styles =================== */
 body {
 	font-family: 'Staatliches', cursive;
-	background-color: var(--primary-bg-colour);
 	color: var(--primary-white);
 }
 
@@ -28,15 +27,15 @@ body {
 h1 {
 	font-family: 'Passion One', cursive;
 	font-weight: 400;
-	font-size: 55px;
+	font-size: 6em;
 	text-transform: uppercase;
+	line-height: 7rem;
 }
 
 .large-hr {
 	font-family: 'Racing Sans One', cursive;
 	font-weight: 400;
-	font-size: 180px;
-	text-transform: none;
+	font-size: 12em;
 	color: var(--primary-yellow);
 	line-height: 8rem;
 }
@@ -66,7 +65,8 @@ p {
 /* ---------- overlay ---------- */
 .overlay {
 	/* put on top of everything else */
-	position: absolute;
+	position: fixed;
+	top: 0;
 	z-index: 1;
 
 	/* width and height expand whole page */
@@ -94,40 +94,38 @@ p {
 		grid-template-columns: repeat(12, 1fr);
 	}
 
-	.main-grid div, .main-grid section, .main-grid .footer {
-		grid-column: span 12;
-	}
-
 	/* ---------- header section ---------- */
 	section.header-section {
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		gap: 2px;
+		grid-column: span 12;
 
 		background-color: var(--primary-red);
-		padding: 1rem;
+		padding: .8rem;
+
+		display: grid;
+		grid-template-columns: 1fr .6fr;
 	}
 
-	.header-section .header {
-		grid-column: span 4;
+	.header-txt-container, .sub-header {
+		grid-column: span 1;
 	}
 
-	.header-section .dot-map {
-		grid-column: span 8;
-		background-color: grey;
-		height: 70vh;
-	}
-
-	.header-section .sub-header {
-		grid-column: span 12;
+	.sub-header {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
+		align-items: flex-end;
+		color: var(--primary-yellow);
 	}
 
 	/* ---------- body section ---------- */
-
-
+	section.body-section {
+		grid-column: span 12;
+		width: 100%;
+	}
+	
+	#viz-container {
+		width: 100%;
+	}
 	/* ---------- footer section ---------- */
 	footer {
 		text-align: center;
