@@ -4,46 +4,49 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Are you a Believer?</title>
+	<title>UFOs Baby!</title>
 	<link rel="stylesheet" href="style.css">
 	<script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
 </head>
 <body>
 
-	<!-- paper overlay -->
-	<div class="overlay" style="display: none;"></div>
+	<div class="container">
+		<!-- one -->
+		<div class="child" id="c1">
+			<div class="nested-grid">
 
-	<div class="main-grid">
+				<div class="title">
+					<h1>Flying saucers and</h1>
+					<h1 class="large-hr">UFOs</h1>
+					<h1>1998-2014</h1>
+				</div>
 
-		<section class="header-section">
+				<div class="sub-title">
+					<h2>Are we really alone?</h2>
+				</div>
 
-			<div class="header-txt-container">
-				<h1>Flying sacuers and</h1>
-				<h1 class="large-hr">UFOs</h1>
-				<h1>1949 - 2014</h1>
 			</div>
+		</div>
 
-			<h2 class="sub-header">Are we really alone?</h2>
-		</section>
-		
-		<section class="body-section">
-			<div id="viz-container">
-				<tableau-viz id="tableauViz" 
-				src='https://public.tableau.com/views/IntrotoMapsTutorial/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link'>
-				</tableau-viz>
+		<!-- two -->
+		<div class="child" id="c2">
+			<div class="nested-grid">
+				<div class="vis-container" id="dotM">
+					vis
+				</div>
 			</div>
+		</div>
 
-			<div class="scroll-banner">
-				<!-- infinte scroll banner of quotes from ufo/alien newspaper articles -->
-				<!-- https://blog.hubspot.com/website/scrolling-text-css -->
+		<!-- three -->
+		<div class="child" id="c2">
+			<div class="nested-grid">
+				<div class="vis-container">
+					vis
+				</div>
 			</div>
-		</section>
-		
-		<footer class="footer">
-			<h2>Do you believe?</h2>
-		</footer>
-
+		</div>
 	</div>
+
 
 	<script src="actions.js"></script>
 </body>
