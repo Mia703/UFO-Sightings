@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="style.css">
 
 	<!-- tableau api -->
-	<script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+	<script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script><script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
 
 	<!-- jquery cnd -->
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
@@ -41,15 +41,36 @@
 
 			<div class="child item2">
 				<section class="viz-wrapper">
-					vis
+					<tableau-viz 
+					src="https://public.tableau.com/views/Re-reDotmapSmaller/Dashboard1">
+					</tableau-viz>
 				</section>
 			</div>
 
 			<div class="child item3">
 				<section class="viz-wrapper">
-					viz
+					<tableau-viz 
+					src="https://public.tableau.com/views/ReCount-mapsSmaller/Dashboard1">
+					</tableau-viz>
 				</section>
 			</div>
+
+			<!-- viz WxH : 1208, 479 -->
+			<!-- <div class="child item4">
+				<section class="viz-wrapper">
+					<tableau-viz 
+					src="">
+					</tableau-viz>
+				</section>
+			</div>
+
+			<div class="child item5">
+				<section class="viz-wrapper">
+					<tableau-viz 
+					src="">
+					</tableau-viz>
+				</section>
+			</div> -->
 		</div>
 
 	</div>

@@ -8,7 +8,7 @@
 	--primary-red: #C24712;
 	--primary-yellow: #F0DC00;
 	--primary-green: #038758;
-	--primary-white: #F5F5F5;
+	--primary-white: #ffffff;
 	--primary-grey: #D9D9D9;
 
 	--std-border-radius: 20px;
@@ -17,12 +17,11 @@
 }
 
 /* =================== reset default styles =================== */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -103,6 +102,9 @@ p {
 	background-color: var(--primary-yellow);
 
 	padding-top: 1rem;
+
+	/* FIXME: remove */
+	display: none;
 }
 
 #w {
@@ -116,7 +118,9 @@ p {
 	grid-template-columns: repeat(12, 1fr);
 	gap: 2px;
 
-	display: none;
+	/* hide until after loading animation */
+	/* FIXME: */
+	/* display: none; */
 }
 
 /* ---------- horizontal scroll ---------- */
@@ -162,6 +166,11 @@ p {
 }
 
 .text-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.viz-wrapper {
 	width: 100%;
 	height: 100%;
 }
