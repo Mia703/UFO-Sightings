@@ -67,7 +67,4 @@ $(document).ready(function () {
 		pop();
 	}, 2000);
 
-
-
-
 });
