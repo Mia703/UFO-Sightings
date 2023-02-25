@@ -103,8 +103,7 @@ p {
 
 	padding-top: 1rem;
 
-	/* FIXME: remove */
-	display: none;
+	/* display: none; */
 }
 
 #w {
@@ -119,8 +118,7 @@ p {
 	gap: 2px;
 
 	/* hide until after loading animation */
-	/* FIXME: */
-	/* display: none; */
+	display: none;
 }
 
 /* ---------- horizontal scroll ---------- */
