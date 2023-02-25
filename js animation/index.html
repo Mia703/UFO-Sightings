@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>HCI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Hello!");
+            console.log(window.screen.availHeight)
+            console.log(window.screen.availWidth)
+
+
+
+            function justforfun() {
+                document.getElementById('w').innerHTML = "The Visualization Part...";
+            }
+
+            function pop() {
+                var x = Math.floor(Math.random() * window.screen.availHeight * .75);
+                var y = Math.floor(Math.random() * window.screen.availHeight * .75);
+                for (let i = 0; i < 30; i++) {
+                    createParticle(x, y);
+                }
+            }
+
+
+
+            function createParticle(x, y) {
+
+
+                const particle = document.createElement('div');
+                document.getElementById('a').appendChild(particle);
+                particle.classList.add('d');
+                particle.style.opacity = "0";
+                const size = Math.floor(Math.random() * 30 + 5);
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.borderRadius = `${Math.floor(Math.random() * 90)}%`;
+                particle.style.background = `hsl(${Math.random() * 90 + 180}, 70%, 60%)`;
+                const destinationX = x + (Math.random() - 0.5) * 2 * 750;
+                const destinationY = y + (Math.random() - 0.5) * 2 * 750;
+                const animation = particle.animate([
+                    {
+                        transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
+                        opacity: 1
+                    },
+                    {
+                        transform: `translate(${destinationX}px, ${destinationY}px)`,
+                        opacity: 0.25
+                    }
+                ], {
+                    duration: Math.random() * 1000 + 500,
+                    easing: 'cubic-bezier(0, .9, .57, 1)',
+                    delay: Math.random() * 200
+                });
+                animation.onfinish = () => {
+                    particle.remove();
+                };
+
+                particle.addEventListener('mouseover', () => {
+                    console.log("Hey! you clicked it!");
+                    document.getElementById('w').innerHTML = "Hey! you hovered over it! Yor Visualization is now loading...";
+                    setTimeout(justforfun, 4000);
+                    clearInterval(intervalId);
+                })
+            }
+
+            const intervalId = window.setInterval(function () {
+                pop();
+            }, 2000);
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="a" style="height: 100vh; width: 100vw">
+        <div id="w">
+            Hover on one of the flying ufo's to see further visualisation before they fade away!
+        </div>
+    </div>
+</body>
+
+</html>

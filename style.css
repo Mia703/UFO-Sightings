@@ -1,99 +1,28 @@
 /* =================== imported fonts =================== */
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Passion+One&family=Racing+Sans+One&family=Staatliches&display=swap');
+
+/* ---------- sub-header ---------- */
 
 /* =================== global variables =================== */
 :root {
-	--primary-bg-colour: #01160E;
-	--primary-red: #C24712;
-	--primary-yellow: #F0DC00;
-	--primary-green: #038758;
-	--primary-white: #F3F1EE;
+
 }
 
 /* =================== reset default styles =================== */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* =================== base page styles =================== */
-body {
-	font-family: 'Staatliches', cursive;
-	color: var(--primary-white);
-	background-color: var(--primary-bg-colour);
-}
 
 /* =================== font styles =================== */
-h1 {
-	font-family: 'Passion One', cursive;
-	font-weight: 400;
-	font-size: 7em;
-	text-transform: uppercase;
-	
-}
-
-.large-hr {
-	font-family: 'Racing Sans One', cursive;
-	font-weight: 400;
-	font-size: 20em;
-	color: var(--primary-yellow);
-	line-height: .8em;
-}
-
-h2 {
-	font-family: 'Carter One', cursive;
-	font-weight: 400;
-	font-size: 3em;
-}
-
-/* un-used but default font */
-p, a {
-	font-family: 'Staatliches', cursive;
-	font-weight: 400;
-	font-size: 16px;
-	text-transform: uppercase;
-}
 
 /* =================== constants =================== */
+.load-animation {
+	width: 100vw;
+	height: 100vh;
 
-.container {
-	margin: 1rem;
-	border: 2px solid green;
-	white-space: nowrap;
-    overflow-x: auto;
+	display: none;
 }
-
-.child {
-    width: 97vw;
-    height: 93vh;
-    background-color: var(--primary-red);
-    display: inline-block;
-	padding: 1rem;
-	margin-right: 10px;
-}
-
-.nested-grid {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	gap: 2px;
-	height: 100%;
-	width: 100%;
-}
-
-#c1 .title {
-	grid-column: span 5;
-}
-
-#c1 .btn-container {
-	grid-column: span 1;
-	margin: auto 0;
-}
-
-#c1 .sub-title {
-	grid-column: span 6;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	margin: auto 0;
-}
+/* =================== media queries =================== */
