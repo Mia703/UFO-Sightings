@@ -34,3 +34,7 @@ h1 {
 	color: white;
 	padding: 1rem;
 }
+
+#sound {
+	display: none;
+}
