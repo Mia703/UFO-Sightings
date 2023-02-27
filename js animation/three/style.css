@@ -1,12 +1,9 @@
 /* =================== imported fonts =================== */
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 /* ---------- sub-header ---------- */
 
 /* =================== global variables =================== */
-/* :root {
 
-} */
 
 /* =================== reset default styles =================== */
 * {
@@ -16,21 +13,16 @@
 }
 
 /* =================== base page styles =================== */
-body {
-	font-family: 'VT323', monospace;
-}
 
 /* =================== font styles =================== */
-h1 {
-	font-size: 4em;
 
-}
 /* =================== constants =================== */
 
 /* =================== media queries =================== */
-.subtitle {
-	position: fixed;
-	z-index: 2;
+
+.title {
+	position: absolute;
+	z-index: 1;
 	color: white;
 	padding: 1rem;
 }
